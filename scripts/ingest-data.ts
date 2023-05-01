@@ -31,7 +31,7 @@ export const run = async () => {
 
     // iterate through each document in the list and append a string
     for (let i = 0; i < docs.length; i++) {
-      let updatedDoc = docs[i] + "sources - " + (path) + ".pdf";
+      let updatedDoc = docs[i] + "source - " + (path) + ".pdf";
       // add the updated document to the new list
       newList.push(updatedDoc);
     }
@@ -42,7 +42,7 @@ export const run = async () => {
     const index = pinecone.Index(PINECONE_INDEX_NAME); //change to your own index name
 
     //embed the PDF documents
-    await PineconeStore.fromDocuments(updatedDoc, embeddings, {
+    await PineconeStore.fromDocuments(newList, embeddings, {
       pineconeIndex: index,
       namespace: PINECONE_NAME_SPACE,
       textKey: 'text',
