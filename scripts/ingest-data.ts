@@ -42,7 +42,7 @@ export const run = async () => {
     const index = pinecone.Index(PINECONE_INDEX_NAME); //change to your own index name
 
     //embed the PDF documents
-    await PineconeStore.fromDocuments(docs, embeddings, {
+    await PineconeStore.fromDocuments(updatedDoc, embeddings, {
       pineconeIndex: index,
       namespace: PINECONE_NAME_SPACE,
       textKey: 'text',
