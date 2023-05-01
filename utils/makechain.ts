@@ -19,8 +19,6 @@ If the question is not related to the context, politely respond that you are tun
 
 sources
 
-{doc.metadata.source}
-
 Question: {question}
 Helpful answer in markdown:`;
 
