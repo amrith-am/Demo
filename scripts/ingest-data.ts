@@ -27,13 +27,10 @@ export const run = async () => {
 
     const docs = await textSplitter.splitDocuments(rawDocs);
     console.log('split docs', docs);
-    let newList = [];
 
     // iterate through each document in the list and append a string
     for (let i = 0; i < docs.length; i++) {
-      let updatedDoc = docs[i] + "source - anatomy.pdf";
-      // add the updated document to the new list
-      newList.push(updatedDoc);
+      docs[i].pageContent += '\nsource - anatomy.pdf';
     }
 
     console.log('creating vector store...');
@@ -42,7 +39,7 @@ export const run = async () => {
     const index = pinecone.Index(PINECONE_INDEX_NAME); //change to your own index name
 
     //embed the PDF documents
-    await PineconeStore.fromDocuments(newList, embeddings, {
+    await PineconeStore.fromDocuments(docs, embeddings, {
       pineconeIndex: index,
       namespace: PINECONE_NAME_SPACE,
       textKey: 'text',
