@@ -30,7 +30,7 @@ export const run = async () => {
 
     // iterate through each document in the list and append a string
     for (let i = 0; i < docs.length; i++) {
-      docs[i].pageContent += '\nsource - anatomy.pdf';
+      docs[i].pageContent += '\nSource: ' + docs[i].metadata.source;
     }
 
     console.log('creating vector store...');
