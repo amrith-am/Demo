@@ -31,7 +31,7 @@ export const run = async () => {
 
     // iterate through each document in the list and append a string
     for (let i = 0; i < docs.length; i++) {
-      let updatedDoc = docs[i] + "source - " + (path) + ".pdf";
+      let updatedDoc = docs[i] + "source - .pdf";
       // add the updated document to the new list
       newList.push(updatedDoc);
     }
