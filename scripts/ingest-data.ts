@@ -27,6 +27,14 @@ export const run = async () => {
 
     const docs = await textSplitter.splitDocuments(rawDocs);
     console.log('split docs', docs);
+    let newList = [];
+
+    // iterate through each document in the list and append a string
+    for (let i = 0; i < docs.length; i++) {
+      let updatedDoc = docs[i] + "sources - " + (path) + ".pdf";
+      // add the updated document to the new list
+      newList.push(updatedDoc);
+    }
 
     console.log('creating vector store...');
     /*create and store the embeddings in the vectorStore*/
