@@ -224,7 +224,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'What is the waiting period for m illness?'
+                        : 'What is the waiting period for my illness?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
