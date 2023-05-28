@@ -29,9 +29,9 @@ export const run = async () => {
     console.log('split docs', docs);
 
     // iterate through each document in the list and append a string
-    for (let i = 0; i < docs.length; i++) {
-      docs[i].pageContent += '\nSource: ' + docs[i].metadata.source;
-    }
+//     for (let i = 0; i < docs.length; i++) {
+//       docs[i].pageContent += '\nSource: ' + docs[i].metadata.source;
+//     }
 
     console.log('creating vector store...');
     /*create and store the embeddings in the vectorStore*/
