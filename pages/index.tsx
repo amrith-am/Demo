@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about this Documents?',
+        message: 'Hi, Welcome to DAN on Enron Dataset!',
         type: 'apiMessage',
       },
     ],
@@ -224,7 +224,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'What is the waiting period for my illness?'
+                        : 'Summary of Preliminary Settlement for March 2001-- CAISO?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
