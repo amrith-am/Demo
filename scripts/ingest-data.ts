@@ -5,9 +5,9 @@ import { pinecone } from '@/utils/pinecone-client';
 import { CustomPDFLoader } from '@/utils/customPDFLoader';
 import { PINECONE_INDEX_NAME, PINECONE_NAME_SPACE } from '@/config/pinecone';
 import { DirectoryLoader } from 'langchain/document_loaders/fs/directory';
-import { OpenAI } from 'langchain';
-import { VectorDBQA } from 'langchain/chains';
-import { RetrievalQA } from 'langchain/chains';
+// import { OpenAI } from 'langchain';
+// import { VectorDBQA } from 'langchain/chains';
+// import { RetrievalQA } from 'langchain/chains';
 import { PagedPDFSplitter } from 'langchain/document_loaders';
 
 
