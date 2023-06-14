@@ -17,11 +17,27 @@ export const run = async () => {
     });
 
     // const loader = new PDFLoader(filePath);
-    const rawDocs = await directoryLoader.load();
+//     const rawDocs = await directoryLoader.load();
+    import * as fs from 'fs';
+
+    const directoryPath = '/content/docs';
+
+    const fileNames: string[] = fs.readdirSync(directoryPath);
+
+    const docs: string[] = [];
+
+    for (let i = 0; i < fileNames.length; i++) {
+      const bookPath = `${directoryPath}/${fileNames[i]}`;
+      console.log(i);
+      console.log(bookPath);
+      const loader = new PagedPDFSplitter(bookPath);
+      docs.push(...loader.loadAndSplit());
+    }
+
 
     /* Split text into chunks */
     const textSplitter = new RecursiveCharacterTextSplitter({
-      chunkSize: 2000,
+      chunkSize: 1500,
       chunkOverlap: 200,
     });
 
