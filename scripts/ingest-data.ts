@@ -23,7 +23,7 @@ export const run = async () => {
 
     // const loader = new PDFLoader(filePath);
 //     const rawDocs = await directoryLoader.load();
-    import * as fs from 'fs';
+//     import * as fs from 'fs';
 
     const directoryPath = '/content/docs';
 
