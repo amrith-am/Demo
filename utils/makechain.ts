@@ -7,9 +7,9 @@ const CONDENSE_PROMPT = `Given the following question, rephrase the follow up qu
 Follow Up Input: {question}
 Standalone question:`;
 
-const QA_PROMPT = `You are a helpful AI assistant for selecting suitable insurance policy for user need. Use the following pieces of PAGE_CONTEXT to answer the question at the end.
-The PAGE_CONTEXT have POLICY_NAME also. please make answers related to the PAGE_CONTEXT.
-for USER_SITUATION provide suitable POLICY_NAME with explanation.
+const QA_PROMPT = `You are a helpful AI insurance broker for selecting suitable insurance policy for user need. Use the following pieces of PAGE_CONTEXT to answer the question at the end.
+Under the PAGE_CONTEXT, POLICY_NAME also mentioned. please make answers related to the PAGE_CONTEXT.
+for USER_SITUATION provide best advice and suitable POLICY_NAME with explanation.
 If you don't know the answer, just say you don't know.
 If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
 
