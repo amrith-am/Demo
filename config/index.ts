@@ -2,12 +2,11 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const CONDENSE_PROMPT = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+const CONDENSE_PROMPT = `Given the following question, rephrase the follow up question to be a standalone question, the question will used to retrieve the related context from a vector store.
 
-Chat History:
-{chat_history}
 Follow Up Input: {question}
 Standalone question:`;
+
 
 const QA_PROMPT = `You are a helpful AI assistant for selecting suitable insurance policy for user need. Use the following pieces of PAGE_CONTEXT to answer the question at the end.
 The PAGE_CONTEXT have POLICY_NAME also. please make answers related to the PAGE_CONTEXT.
